@@ -4,7 +4,6 @@ import { motion } from 'framer-motion';
 import Link from 'next/link';
 import { 
   Award, 
-  CheckCircle, 
   Users, 
   Clock, 
   Shield,
@@ -43,57 +42,7 @@ export default function GoldenVisa() {
     }
   ];
 
-  const eligibilityCategories = [
-    {
-      icon: TrendingUp,
-      title: 'Investors',
-      description: 'Real estate, business, or fund investors meeting minimum thresholds',
-      features: [
-        'Real estate investment of AED 2 million+',
-        'Business investment of AED 500,000+',
-        'Investment fund contributions',
-        'Partnership in existing business'
-      ],
-      href: '/contact',
-    },
-    {
-      icon: Award,
-      title: 'Entrepreneurs',
-      description: 'Innovative entrepreneurs with approved business projects',
-      features: [
-        'Approved startup project',
-        'Previous entrepreneurial success',
-        'Innovation-focused business',
-        'Economic contribution potential'
-      ],
-      href: '/contact',
-    },
-    {
-      icon: Users,
-      title: 'Skilled Professionals',
-      description: 'Highly skilled professionals in specialized fields',
-      features: [
-        'Advanced degrees',
-        'Specialized expertise',
-        'Minimum salary requirements',
-        'Professional achievements'
-      ],
-      href: '/contact',
-    },
-    {
-      icon: FileText,
-      title: 'Outstanding Students',
-      description: 'Exceptional students from top universities worldwide',
-      features: [
-        'Top university graduates',
-        'Exceptional academic performance',
-        'STEM field specialization',
-        'Research contributions'
-      ],
-      href: '/contact',
-    }
-  ];
-
+  
   const process = [
     {
       step: '01',
@@ -179,7 +128,7 @@ export default function GoldenVisa() {
       </section>
 
       {/* Stats Section */}
-      <section className="py-16 bg-[#242424]">
+      <section className="py-20 sm:py-10 bg-[#242424]">
         <div className="container mx-auto px-4">
           <div className="grid sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {stats.map((stat, index) => (
@@ -191,7 +140,7 @@ export default function GoldenVisa() {
                 transition={{ delay: index * 0.1 }}
                 className="text-center"
               >
-                <div className="text-3xl lg:text-4xl font-bold text-orange-600 mb-2">
+                <div className="text-3xl lg:text-4xl font-bold text-white mb-2">
                   {stat.number}
                 </div>
                 <p className="text-white font-medium">{stat.label}</p>
@@ -202,7 +151,7 @@ export default function GoldenVisa() {
       </section>
 
       {/* Benefits Section */}
-      <section className="py-20 bg-gradient-to-r from-amber-600 to-orange-700">
+      <section className="py-20 sm:py-10 bg-gradient-to-r from-amber-600 to-orange-700">
         <div className="container mx-auto px-4">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -239,37 +188,9 @@ export default function GoldenVisa() {
         </div>
       </section>
 
-      {/* Eligibility Categories */}
-      <section className="py-20 bg-[#242424]" id="eligibility">
-        <div className="container mx-auto px-4">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="text-center mb-12"
-          >
-            <h2 className="text-3xl lg:text-4xl font-bold text-brand mb-4">
-              Eligibility Categories
-            </h2>
-            <p className="text-xl text-white max-w-2xl mx-auto">
-              Discover if you qualify for the UAE Golden Visa under one of these categories
-            </p>
-          </motion.div>
-
-          <div className="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {eligibilityCategories.map((category, index) => (
-              <ServiceCard
-                key={category.title}
-                {...category}
-                delay={index * 0.1}
-              />
-            ))}
-          </div>
-        </div>
-      </section>
-
+      
       {/* Process Section */}
-      <section className="py-20 bg-white">
+      <section className="py-20 sm:py-10 bg-white">
         <div className="container mx-auto px-4">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -313,7 +234,7 @@ export default function GoldenVisa() {
       </section>
 
       {/* Testimonials */}
-      <section className="py-20 bg-[#242424]">
+      <section className="py-20 sm:py-10 bg-[#242424]">
         <div className="container mx-auto px-4">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -321,7 +242,7 @@ export default function GoldenVisa() {
             viewport={{ once: true }}
             className="text-center mb-12"
           >
-            <h2 className="text-3xl lg:text-4xl font-bold text-brand mb-4">
+            <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">
               Success Stories
             </h2>
             <p className="text-xl text-white">
@@ -375,7 +296,7 @@ export default function GoldenVisa() {
       </section>
 
       {/* Requirements FAQ */}
-      <section className="py-20 bg-white">
+      <section className="py-20 sm:py-10 bg-white">
         <div className="container mx-auto px-4">
           <motion.div
             initial={{ opacity: 0, y: 20 }}

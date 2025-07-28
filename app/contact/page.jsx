@@ -120,7 +120,7 @@ export default function Contact() {
       </section>
 
       {/* Contact Section */}
-      <section className="py-20 bg-white">
+      <section className="py-20 sm:py-10 bg-white">
         <div className="container mx-auto px-4">
           <div className="grid sm:grid-cols-1 lg:grid-cols-2 gap-12">
 
@@ -129,7 +129,7 @@ export default function Contact() {
               initial={{ opacity: 0, x: 20 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
-              className="space-y-8 bg-secondary p-8 rounded-xl shadow-lg"
+              className="space-y-8 bg-brand p-8 rounded-xl shadow-lg"
             >
               <div>
                 <h2 className="text-2xl font-bold text-white mb-6">Get in Touch</h2>
@@ -323,7 +323,7 @@ export default function Contact() {
       </section>
 
       {/* FAQ Section */}
-      <section className="py-20 bg-[#F3F7FB]">
+      <section className="py-20 sm:py-10 bg-[#F3F7FB]">
         <div className="container mx-auto px-4">
           <motion.div
             initial={{ opacity: 0, y: 20 }}

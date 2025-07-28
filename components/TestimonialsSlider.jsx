@@ -21,10 +21,10 @@ const TestimonialCard = ({ testimonial }) => (
 );
 
 const TestimonialsSection = () => (
-  <section className="py-20 relative">
-    <div className="absolute top-1/2 left-0 w-full h-full bg-secondary -z-10" />
+  <section className="py-20 sm:py-10 relative">
+    <div className="absolute top-1/2 left-0 w-full h-full bg-brand -z-10" />
     <div className="container mx-auto px-4">
-      <div className="bg-[#F3F7FB] p-[80px] sm:px-[15px] sm:py-10 pt-10 rounded-xl shadow-lg mb-12">
+      <div className="bg-white p-[80px] border border-gray sm:px-[15px] sm:py-10 pt-10 rounded-xl shadow-lg mb-12">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}

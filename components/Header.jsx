@@ -9,7 +9,7 @@ import NavLink from './NavLink';
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
-  const [servicesOpen, setServicesOpen] = useState(false);
+
 
   useEffect(() => {
     const handleScroll = () => {
@@ -75,7 +75,7 @@ const Header = () => {
             {/* Mobile Menu Button */}
             <button
               onClick={() => setIsOpen(!isOpen)}
-              className="lg:hidden p-2 text-gray-600 hover:text-gray-900 transition-colors"
+              className="lg:hidden p-2 text-brand transition-colors"
             >
               {isOpen ? <X size={24} /> : <Menu size={24} />}
             </button>
@@ -89,7 +89,7 @@ const Header = () => {
               initial={{ opacity: 0, height: 0 }}
               animate={{ opacity: 1, height: 'auto' }}
               exit={{ opacity: 0, height: 0 }}
-              className="lg:hidden bg-white border-t"
+              className="lg:hidden bg-white text-brand border-t"
             >
               <div className="container mx-auto px-4 py-4">
                 <div className="flex flex-col space-y-4">

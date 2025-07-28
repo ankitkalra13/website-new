@@ -23,7 +23,7 @@ export default function BlogSlider() {
   }, []);
 
   return (
-    <section className="py-20 bg-[#F3F7FB]">
+    <section className="py-20 sm:py-10 bg-[#F3F7FB]">
       <div className="container mx-auto px-4 ">
         <div className="mb-12">
           <p className="text-base text-brand">Stay updated with</p>

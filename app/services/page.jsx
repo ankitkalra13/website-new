@@ -192,7 +192,7 @@ export default function Services() {
 
 
       {/* Services Grid */}
-      <section className="py-20 bg-cover" id="services" style={{backgroundImage: "url('https://dubiz.co/public/assets/img/service/service-bg.webp')", }}>
+      <section className="py-20 sm:py-10 bg-cover" id="services" style={{backgroundImage: "url('https://dubiz.co/public/assets/img/service/service-bg.webp')", }}>
         <div className="container mx-auto px-4">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -221,7 +221,7 @@ export default function Services() {
       </section>
 
       {/* Process Section */}
-      <section className="py-20 bg-white">
+      <section className="py-20 sm:py-10 bg-white">
         <div className="container mx-auto px-4">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -265,7 +265,7 @@ export default function Services() {
       </section>
 
       {/* Why Choose Us */}
-      <section className="py-20 bg-[#F3F7FB]">
+      <section className="py-20 sm:py-10 bg-[#F3F7FB]">
         <div className="container mx-auto px-4">
           <motion.div
             initial={{ opacity: 0, y: 20 }}

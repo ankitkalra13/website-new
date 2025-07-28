@@ -10,7 +10,7 @@ const NavLink = ({ href, children }) => {
   return (
     <Link
       href={href}
-      className={`font-medium transition-colors ${isActive ? 'text-brand' : 'text-secondary hover:text-brand'}`}>
+      className={`font-medium transition-colors ${isActive ? 'text-secondary' : 'text-brand hover:text-brand'}`}>
       {children}
     </Link>
   );

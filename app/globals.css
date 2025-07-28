@@ -84,7 +84,7 @@
 
 
 .theme-btn{
-    background-color: #f05a2b;
+    background-color: #003366;
     color: #fff;
     display: inline-block;
     font-size: 16px;
@@ -97,11 +97,12 @@
     position: relative;
     z-index: 1;
     line-height: 1;
+    border: 1px solid #003366;
   }
 
   .theme-btn::before {
     content: "";
-    background-color: #1f1a4e;
+    background-color: #fff;
     width: 0;
     height: 50%;
     position: absolute;
@@ -114,7 +115,7 @@
 
   .theme-btn::after {
     content: "";
-    background-color: #1f1a4e;
+    background-color: #fff;
     width: 0;
     height: 50%;
     position: absolute;
@@ -127,4 +128,21 @@
 
   .theme-btn:hover::before, .theme-btn:hover::after {
     width: 100%;
+  }
+
+  .theme-btn:hover {
+    color: #003366;
+  }
+
+  .theme-btn.secondary{
+    background-color: #fff;
+    color: #003366;
+  }
+
+  .theme-btn.secondary::before, .theme-btn.secondary::after {
+    background-color: #003366;
+  }
+
+  .theme-btn.secondary:hover {
+    color: #fff;
   }

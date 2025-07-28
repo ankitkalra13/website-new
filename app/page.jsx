@@ -1,16 +1,18 @@
 'use client';
 
 import { motion } from 'framer-motion';
+import IMAGES from '@/lib/images';
 import Link from 'next/link';
 import faqItems from '../lib/faqItems.json';
-import { ArrowRight, Phone, Check} from 'lucide-react';
+import { ArrowRight, Phone, Check, ArrowLeft} from 'lucide-react';
 import Image from 'next/image';
 import ServiceCard from '@/components/ServiceCard';
 import Accordion from '@/components/Accordion';
 import { services } from '../lib/servicesData';
 import BlogSlider from '@/components/BlogSlider';
 import TestimonialsSlider from '@/components/TestimonialsSlider';
-
+import HomePageMainSlider from '@/components/HomePageMainSlider';
+import Jurisdictions from '@/components/Jurisdictions';
 
 
 
@@ -18,58 +20,83 @@ export default function Home() {
 
 
   return (
-    <div className="overflow-hidden">
-      {/* Hero Section */}
-      <section className="relative w-full bg-cover bg-center pt-[4rem] overflow-hidden" style={{ backgroundImage: "url('https://dubiz.co/public/assets/img/hero/hero-bg.webp')" }}>
-  
-        <div className="absolute top-0 bottom-0 right-0 h-[120%] maxxl:max-w-[600px] sm:hidden md:hidden">
-              <Image width={300} height={300} src="https://dubiz.co/public/assets/img/hero/herobg.webp?v=2.6.0"
-                alt="Hero Illustration"
-                className="w-full h-full max-w-[100%]" />
-        </div>
+    <div>
+      <section className="relative h-[500px] max-h-[90vh] xxl:h-[70vh] sm:h-[450px] sm:max-h-[600px]">
+            <motion.div
+                initial={{ opacity: 0, y: -40 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, ease: 'easeOut' }}
+                viewport={{ once: true }} className='absolute top-[105px] sm:top-[50px] z-10 translate-x-[-50%] w-full'> 
+              <div className="">
+                <p className="text-white text-base mb-5 sm:mx-auto text-center">
+                  You are unstoppable, so is your</p>
+                <p className="text-white mb-5 xl:text-[56px] xl:leading-[64px] lg:text-heading3 md:text-textxl sm:text-xl sm:max-w-[70%] sm:mx-auto sm:whitespace-break-spaces	 font-semibold text-center whitespace-pre	drop-shadow-md">
+                  Business Setup in Dubai with Dubiz</p>
 
-      
-        <div className="absolute top-0 left-0 hidden sm:block">
-          <Image width={300} height={300}
-            loading="lazy"
-            decoding="async"
-            src="https://dubiz.co/public/assets/img/hero/line-shape.webp?v=2.6.0"
-            alt="shape-img"
-          />
-        </div>
-      
+                <p className='text-white text-base sm:max-w-[90%] sm:mx-auto text-center'>
+                  <b>4k+ Success Stories | 7+ Years of Excellence | End-to-End Services</b><br/>  
+                  We are here to make your entrepreneurial dreams faster, affordable, and completely
+                  stress-free!</p>
+              </div>
+            </motion.div>
 
+            <motion.div
+                initial={{ opacity: 0, y: 10 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.1, ease: 'easeOut' }}
+                viewport={{ once: true }} className="flex items-center h-full">
+                <div className="flex items-center h-full w-full">
+                  <Link href="/contact" rel="noopener noreferrer" className="flex h-full w-[50%] items-center relative overflow-hidden group">
+                    
+                    <div>
+                      <div className="absolute right-0 left-0 top-0 bottom-0 z-[1] bg-black opacity-50 sm:opacity-70"></div>
+                      <div className="absolute left-[-40px] top-0 right-0 bg-right-bottom z-[-1] bottom-0 transition-transform duration-1000 transform group-hover:translate-x-10 bg-no-repeat" style={{ backgroundImage: `url(${IMAGES.HomeNew.banner1.src})`, backgroundSize: 'cover' }}>
+                      </div>
+                    </div>
 
-        
-        <div className="container mx-auto px-4 relative z-20 flex items-center justify-between h-full">
-        
-          <div className="w-[65%] sm:w-full">
-            <p className='text-secondary text-lg mb-3 sm:text-center md:text-center'> You are unstoppable, so is your</p>
-            <h1 className="text-[80px] sm:text-[32px] sm:text-center font-extrabold leading-[112%] sm:leading-[38px] text-secondary">
-              Business Setup in <br/>
-              Dubai with Dubiz
-            </h1>
-            <p className='text-gray text-lg mt-4 sm:text-center'>
-              <b>4k+ Success Stories | 7+ Years of Excellence | End-to-End Services</b>
-              <br/>We are here to make your entrepreneurial dreams faster, affordable, and completely<br/> stress-free!
-            </p>
-            <Link href="/contact" className="mt-6 theme-btn sm:my-4 sm:block sm:mx-auto sm:text-center sm:max-w-[85%] sm:px-[20px]">
-              Start With Free Consultation <ArrowRight className="inline-block ml-2" size={20} />
-            </Link>
-          </div>
+                    <motion.div
+                      initial={{ opacity: 0, x: -30 }}
+                      whileInView={{ opacity: 1, x: 0 }}
+                      transition={{ duration: 0.6, ease: 'easeOut' }}
+                      viewport={{ once: true }} className="ml-auto">
+                      
+                      <div className="bg-brand border border-brand shadow-md text-white text-sm sm:text-xs px-5 pl-10 sm:px-2 font-bold sm:font-medium rounded-s-[5px] h-[50px] flex items-center mt-[150px] sm:mt-[250px] relative z-[2] transition-all duration-300 ease-in-out group-hover:from-[#0363C4] group-hover:to-[#022B5C]">
+                        <ArrowLeft size={20} className="transition-transform duration-200 transform group-hover:translate-x-[-20px] sm:group-hover:translate-x-[-3px] sm:w-[14px] sm:h-[14px]"></ArrowLeft>
+                        <span className="ml-1"> Free Consultation </span>
+                      </div>
+                    </motion.div>
 
-          <div className="w-[45%] mt-10 sm:hidden md:w-full">
-            <div className="w-auto max-w-[75%] h-auto  fourxl:w-[520px] fourxl:h-[725px]">
-              <Image width={300} height={300} src="https://dubiz.co/public/assets/img/hero/Welcome-to-DUBIZ-Image-2.webp?v=2.6.0"
-                alt="Hero Illustration"
-                className="w-full h-full max-w-[100%]" />
-            </div>
-          </div>
-        </div>
+                  </Link>
+
+                  <Link href="/services" rel="noopener noreferrer" className="flex h-full w-[50%] items-center relative overflow-hidden group">
+                    
+                    <div>
+                      <div className="absolute left-0 right-[-40px] bg-right-bottom bg-no-repeat z-[-1] bottom-0 top-0 transition-transform duration-1000 transform group-hover:translate-x-[-40px]" style={{ backgroundImage: `url(${IMAGES.HomeNew.banner2.src})`, backgroundSize: 'cover' }}>
+                      </div>
+                      <div className="absolute right-0 left-0 top-0 bottom-0 z-[1] bg-black opacity-50 sm:opacity-70"></div>
+                    </div>
+
+                    <motion.div
+                      initial={{ opacity: 0, x: 30 }}
+                      whileInView={{ opacity: 1, x: 0 }}
+                      transition={{ duration: 0.6, ease: 'easeOut' }}
+                      viewport={{ once: true }} className="mr-auto">
+
+                      <div className="bg-white border border-brand shadow-md text-brand text-sm px-5 sm:text-xs pr-10 sm:px-2 font-bold sm:font-medium rounded-e-[5px] h-[50px] mr-auto flex items-center mt-[150px] sm:mt-[250px] relative z-[2]">
+                        <span className="mr-1">  View Services </span>
+                          <ArrowRight size={20} className="transition-transform duration-200 transform group-hover:translate-x-[20px] sm:group-hover:translate-x-[3px] sm:w-[14px] sm:h-[14px]"></ArrowRight>
+                      </div>
+                    </motion.div>
+                  </Link>
+                </div>
+            </motion.div>  
       </section>
 
+      {/* Jurisdictions */}
+      <Jurisdictions />
+
       {/* About Section */}
-      <section className="py-16 mb-16 sm:mb-0">
+      <section className="py-20 sm:py-10 mb-16 sm:mb-0">
         <div className='container mx-auto px-4'>
           <div className="flex flex-col lg:flex-row gap-12">
             {/* Left Column */}
@@ -129,7 +156,7 @@ export default function Home() {
                 transition={{ duration: 0.6, ease: 'easeOut' }}
                 viewport={{ once: true }}> 
                 <div className="mb-6">
-                  <p className="text-orange-600 font-semibold uppercase tracking-wide">
+                  <p className="text-brand font-semibold uppercase tracking-wide">
                     Dubiz Stands As
                   </p>
                   <h2 className="text-3xl lg:text-4xl font-bold text-gray-900">
@@ -146,15 +173,15 @@ export default function Home() {
 
                 <ul className="space-y-4 mb-6">
                   <li className="flex items-start gap-2 text-gray-800">
-                    <Check className="text-orange-600 w-5 h-5 mt-1" />
+                    <Check className="text-brand w-5 h-5 mt-1" />
                     End-to-end company formation in UAE.
                   </li>
                   <li className="flex items-start gap-2 text-gray-800">
-                    <Check className="text-orange-600 w-5 h-5 mt-1" />
+                    <Check className="text-brand w-5 h-5 mt-1" />
                     Transparent and hassle-free process.
                   </li>
                   <li className="flex items-start gap-2 text-gray-800">
-                    <Check className="text-orange-600 w-5 h-5 mt-1" />
+                    <Check className="text-brand w-5 h-5 mt-1" />
                     Custom packages at unmatched price.
                   </li>
                 </ul>
@@ -169,7 +196,7 @@ export default function Home() {
                   </Link>
 
                   <a href="tel:+971563695485" className="flex items-center gap-3">
-                    <div className="bg-orange-600 p-3 rounded-full flex justify-center items-center">
+                    <div className="bg-brand p-3 rounded-full flex justify-center items-center">
                       <Phone className="text-white w-5 h-5" />
                     </div>
                     <div>
@@ -187,7 +214,7 @@ export default function Home() {
       </section>
 
       {/* Business Setup in Dubai */}
-      <section className="relative py-16 bg-cover bg-center overflow-hidden" style={{
+      <section className="relative py-20 sm:py-10 bg-cover bg-center overflow-hidden bg-fixed" style={{
         backgroundImage: 'url(https://dubiz.co/public/assets/img/Business-Setup-in-Dubai-the-Dubiz-difference.webp)',   }}>
         <div
           className="absolute inset-0 w-full h-full opacity-75 z-0"
@@ -222,7 +249,7 @@ export default function Home() {
                   </p>
 
                   <div className="text-center mt-6">
-                    <Link href="/contact" className="theme-btn light-mode">
+                    <Link href="/contact" className="theme-btn secondary light-mode">
                       Let’s Do It
                     </Link>
                   </div>
@@ -233,15 +260,18 @@ export default function Home() {
         </motion.div>
       </section>
 
+      {/* Slider Section */}
+      <HomePageMainSlider />    
+
       {/* Packages */}
-      <section id="packages" className='bg-[#F3F7FB] py-16'>
+      <section id="packages" className='py-20 sm:py-10'>
         <div className="container mx-auto px-4"> 
           <div className="section-title-area mb-3 md:mb-0">
             <div className="section-title relative mb-[30px] -mt-[7px]">
               <p className="section-p text-brand mb-2 inline-block font-medium uppercase">
                 Effortless Company Formation in UAE Begins Here
               </p>
-              <h2 className="text-[40px] text-secondary font-bold text-gray-900">
+              <h2 className="text-3xl lg:text-4xl text-brand font-bold mb-5">
                 Our Dubai Company Setup Packages
               </h2>
               <p className='text-gray text-base'>Get customized company formation services Dubai at best prices</p>
@@ -293,7 +323,7 @@ export default function Home() {
                       'Bank Account Assistance'
                     ].map((item, i) => (
                       <li key={i} className={`${i < 11 ? 'mb-[10px]' : ''} flex items-center gap-2`}>
-                      <Check className="text-orange-600 w-5 h-5 mr-1" />
+                      <Check className="text-brand w-5 h-5 mr-1" />
                         {item}
                       </li>
                     ))}
@@ -346,7 +376,7 @@ export default function Home() {
                       'Bank Account Assistance'
                     ].map((item, i) => (
                       <li key={i} className={`${i < 11 ? 'mb-[10px]' : ''} flex items-center gap-2`}>
-                      <Check className="text-orange-600 w-5 h-5 mr-1" />
+                      <Check className="text-brand w-5 h-5 mr-1" />
                         {item}
                       </li>
                     ))}
@@ -398,7 +428,7 @@ export default function Home() {
                       'Bank Account Assistance'
                     ].map((item, i) => (
                       <li key={i} className={`${i < 11 ? 'mb-[10px]' : ''} flex items-center gap-2`}>
-                      <Check className="text-orange-600 w-5 h-5 mr-1" />
+                      <Check className="text-brand w-5 h-5 mr-1" />
                         {item}
                       </li>
                     ))}
@@ -427,7 +457,7 @@ export default function Home() {
       </section>
 
       {/* Services Section */}
-      <section className="pt-20">
+      <section className="py-20 sm:py-10 bg-[#F3F7FB]">
         <div className="container mx-auto px-4">
           <motion.div
             initial={{ opacity: 0, y: 60 }}
@@ -468,7 +498,7 @@ export default function Home() {
           </motion.div>
 
         </div>
-      </section>
+      </section>      
 
       {/* Testimonials */}
       <TestimonialsSlider />
@@ -478,7 +508,7 @@ export default function Home() {
        <BlogSlider/>
 
       {/* FAQ Section */}
-      <section className="py-20 bg-white">
+      <section className="py-20 sm:py-10 bg-white">
         <div className="container mx-auto px-4">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
